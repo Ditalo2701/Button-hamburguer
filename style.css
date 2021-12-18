@@ -1,0 +1,77 @@
+body {
+
+  background-color: black;
+
+}
+
+#hamburguer {
+  position: relative;
+  top: 0;
+  left: 0;
+
+
+
+  width: 400px;
+  height: 400px;
+
+
+
+  background: black;
+  border-radius: 15px;
+  margin: auto;
+
+  transition: .8s ease;
+}
+
+#hamburguer::after {
+  content: '';
+
+  position: absolute;
+
+  top: 30%;
+  left: 15%;
+
+  width: 70%;
+  height: 15%;
+
+  background: white;
+  border-radius: 8px;
+
+  transition: .8s ease;
+
+}
+
+#hamburguer::before {
+  content: '';
+
+  width: 30%;
+  height: 15%;
+
+  position: absolute;
+
+  top: 50%;
+  right: 15%;
+
+  background-color: white;
+  border-radius: 8px;
+
+  transition: .8s ease;
+}
+
+#hamburguer.active::after {
+
+  transform: rotate(225deg);
+  top: 40%;
+  left: 15%;
+}
+
+#hamburguer.active::before {
+
+  transform: rotate(-225deg);
+  top: 40%;
+  left: 15%;
+
+  width: 70%;
+
+}
+</style>
